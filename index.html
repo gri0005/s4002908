@@ -1,0 +1,41 @@
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"></script>
+    <style>
+        body {
+            background-color: rgb(154, 181, 238);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .icon{
+            margin:25%;
+            width:50%;
+        }
+
+    </style>
+
+    <title>
+        icons
+    </title>
+</head>
+<body>
+
+            <!--imagesssss-->
+        <img id="cymatic" class="icon" src="img/cymatics.png" onmouseover="this.src='img/tides.png'" onmouseout="this.src='img/cymatics.png'">
+        <img id="tides" class="icon" src="img/tides.png" >
+        <img id="waves" class="icon" src="img/waves.png" >
+
+        <!--javaaaaaaa for sound-->
+        <script>
+            var sound1 = new buzz.sound("sound/clang.mp3");
+            var sound2 = new buzz.sound("sound/twinkle.mp3");
+            var sound3 = new buzz.sound("sound/shlurp.mp3");
+
+            window.onload = function() {
+                document.getElementById('cymatic').addEventListener('click', function() {sound1.play(); });
+                document.getElementById('tides').addEventListener('click', function() {sound2.play(); });
+                document.getElementById('waves').addEventListener('click', function() {sound3.play(); });
+
+            }
+        </script>
+
+
+</body>
