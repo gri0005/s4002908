@@ -3,11 +3,25 @@
     <style>
         body {
             background-color: rgb(154, 181, 238);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        .icon{
-            margin:25%;
-            width:50%;
+        .row1{
+         margin-left: 10% ;
+         margin-top: 100px;
+         width: 20%;
+         
+        }
+
+        .row2{
+         margin-left: 10% ;
+         margin-top: 60px;
+         width: 20%;
+        }
+
+        .row3{
+            margin-left: 10%;
+            margin-top: 60px;
+            width: 20%;
+            margin-bottom: 100px;
         }
 
     </style>
@@ -19,20 +33,39 @@
 <body>
 
             <!--imagesssss-->
-        <img id="cymatic" class="icon" src="img/cymatics.png" onmouseover="this.src='img/tides.png'" onmouseout="this.src='img/cymatics.png'">
-        <img id="tides" class="icon" src="img/tides.png" >
-        <img id="waves" class="icon" src="img/waves.png" >
+        <img id="waves" class="row1" src="img/waves_1.png" onmouseover="this.src='img/waves_2.png';" onmouseout="this.src='img/waves_1.png';"/>
+        <img id="ripples" class="row1" src="img/ripple_1.png" onmouseover="this.src='img/ripple_2.png';" onmouseout="this.src='img/ripple_1.png';"/>
+        <img id="interference" class="row1" src="img/interf_1.png" onmouseover="this.src='img/interf_2.png';" onmouseout="this.src='img/interf_1.png';"/>
+        <img id="resistance" class="row2" src="img/resis_1.png" onmouseover="this.src='img/resis_2.png';" onmouseout="this.src='img/resis_1.png';"/>
+        <img id="cymatics" class="row2" src="img/cymatics_1.png" onmouseover="this.src='img/cymatics_2.png';" onmouseout="this.src='img/cymatics_1.png';"/>
+        <img id="current" class="row2" src="img/current_1.png" onmouseover="this.src='img/current_2.png';" onmouseout="this.src='img/current_1.png';"/>
+        <img id="tides" class="row3" src="img/tides_1.png" onmouseover="this.src='img/tides_2.png';" onmouseout="this.src='img/tides_1.png';"/>
+        <img id="diffraction" class="row3" src="img/diff_1.png" onmouseover="this.src='img/diff_2.png';" onmouseout="this.src='img/diff_1.png';"/>
+        <img id="level" class="row3" src="img/level_1.png" onmouseover="this.src='img/level_2.png';" onmouseout="this.src='img/level_1.png';"/>
 
         <!--javaaaaaaa for sound-->
         <script>
-            var sound1 = new buzz.sound("sound/clang.mp3");
-            var sound2 = new buzz.sound("sound/twinkle.mp3");
-            var sound3 = new buzz.sound("sound/shlurp.mp3");
+            var sound1 = new buzz.sound("sound/ripples.mp3");
+            var sound2 = new buzz.sound("sound/cymatics.mp3");
+            var sound3 = new buzz.sound("sound/interference.mp3");
+            var sound4 = new buzz.sound("sound/waves.mp3");
+            var sound5 = new buzz.sound("sound/resistance.mp3");
+            var sound6 = new buzz.sound("sound/tides.mp3");
+            var sound7 = new buzz.sound("sound/diffraction.mp3");
+            var sound8 = new buzz.sound("sound/level.mp3");
+            var sound9 = new buzz.sound("sound/current.mp3");
+
 
             window.onload = function() {
-                document.getElementById('cymatic').addEventListener('click', function() {sound1.play(); });
-                document.getElementById('tides').addEventListener('click', function() {sound2.play(); });
-                document.getElementById('waves').addEventListener('click', function() {sound3.play(); });
+                document.getElementById('ripples').addEventListener('mouseover', function() {sound1.play(); });
+                document.getElementById('cymatics').addEventListener('mouseover', function() {sound2.play(); });
+                document.getElementById('interference').addEventListener('mouseover', function() {sound3.play(); });
+                document.getElementById('waves').addEventListener('mouseover', function() {sound4.play(); });
+                document.getElementById('resistance').addEventListener('mouseover', function() {sound5.play(); });
+                document.getElementById('tides').addEventListener('mouseover', function() {sound6.play(); });
+                document.getElementById('diffraction').addEventListener('mouseover', function() {sound7.play(); });
+                document.getElementById('level').addEventListener('mouseover', function() {sound8.play(); });
+                document.getElementById('current').addEventListener('mouseover', function() {sound9.play(); });
 
             }
         </script>
